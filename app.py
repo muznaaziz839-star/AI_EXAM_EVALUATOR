@@ -1,46 +1,45 @@
 import streamlit as st
-import pickle
-from keras.preprocessing.sequence import pad_sequences
 
-# Load model
-from keras.models import load_model
-
-model = load_model("model.keras", compile=False)
-
-with open("tokenizer.pkl", "rb") as f:
-    tokenizer = pickle.load(f)
-
-max_len = 30
-
-st.set_page_config(page_title="AI Exam Evaluator")
+st.set_page_config(
+    page_title="AI Exam Answer Evaluator",
+    layout="centered"
+)
 
 st.title("📝 AI Exam Answer Evaluator")
+st.write("Simple AI-based answer scoring system")
 
 question = st.text_input("Enter Question")
-ideal = st.text_area("Enter Ideal Answer")
-student = st.text_area("Enter Student Answer")
+ideal_answer = st.text_area("Enter Ideal Answer")
+student_answer = st.text_area("Enter Student Answer")
 
-if st.button("Check Answer"):
+def calculate_score(ideal, student):
+    if not ideal or not student:
+        return 0
 
-    text = question + " " + ideal + " " + student
+    ideal_words = set(ideal.lower().split())
+    student_words = set(student.lower().split())
 
-    seq = tokenizer.texts_to_sequences([text])
-    padded = pad_sequences(seq, maxlen=max_len)
+    if len(ideal_words) == 0:
+        return 0
 
-    pred = model.predict(padded)[0][0]
+    match = len(ideal_words.intersection(student_words))
 
-    score = round(float(pred), 2)
+    score = (match / len(ideal_words)) * 10
 
-    if score < 0:
-        score = 0
-    if score > 10:
-        score = 10
+    return round(score, 2)
 
-    st.success(f"Predicted Score = {score}/10")
+if st.button("Evaluate Answer"):
+
+    score = calculate_score(ideal_answer, student_answer)
+
+    st.success(f"📊 Score: {score}/10")
 
     if score >= 8:
-        st.info("Excellent Answer")
+        st.info("🌟 Excellent Answer")
     elif score >= 5:
-        st.warning("Average Answer")
+        st.warning("👍 Average Answer")
     else:
-        st.error("Poor Answer")
+        st.error("❌ Poor Answer")
+
+    st.write("### 🔍 Analysis")
+    st.write("Matching keywords:", len(set(ideal_answer.lower().split()).intersection(set(student_answer.lower().split()))))
