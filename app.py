@@ -1,6 +1,5 @@
 import streamlit as st
 import pickle
-from keras.models import load_model
 from keras.preprocessing.sequence import pad_sequences
 
 # Load model
