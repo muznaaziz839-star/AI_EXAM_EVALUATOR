@@ -1,0 +1,32 @@
+question,ideal_answer,student_answer,score
+What is AI?,Artificial intelligence is simulation of human intelligence,AI is making machines smart,8
+What is AI?,Artificial intelligence is simulation of human intelligence,AI means robots only,4
+What is AI?,Artificial intelligence is simulation of human intelligence,AI allows computers to think and learn,9
+What is AI?,Artificial intelligence is simulation of human intelligence,AI is a game,2
+What is ML?,Machine learning allows systems to learn from data,ML learns from data,9
+What is ML?,Machine learning allows systems to learn from data,ML is coding only,3
+What is ML?,Machine learning allows systems to learn from data,ML helps machines improve automatically,8
+What is ML?,Machine learning allows systems to learn from data,ML is hardware,2
+What is Python?,Python is a programming language,Python is used for coding,9
+What is Python?,Python is a programming language,Python is snake,2
+What is Python?,Python is a programming language,Python is easy language for software development,8
+What is Python?,Python is a programming language,Python is a database,1
+What is DBMS?,DBMS manages databases,DBMS stores data,8
+What is DBMS?,DBMS manages databases,DBMS is hardware,2
+What is DBMS?,DBMS manages databases,DBMS controls and organizes databases,9
+What is DBMS?,DBMS manages databases,DBMS is keyboard software,1
+What is OOP?,Object oriented programming uses classes and objects,OOP uses classes and objects,9
+What is OOP?,Object oriented programming uses classes and objects,OOP is only coding style,5
+What is OOP?,Object oriented programming uses classes and objects,OOP is hardware device,1
+What is Internet?,Internet is a global network connecting computers,Internet connects computers worldwide,9
+What is Internet?,Internet is a global network connecting computers,Internet is browser only,3
+What is OS?,Operating system manages computer resources,OS controls hardware and software resources,9
+What is OS?,Operating system manages computer resources,OS means office system,2
+What is RAM?,RAM is temporary memory used by computer,RAM stores temporary data,9
+What is RAM?,RAM is temporary memory used by computer,RAM is permanent storage,2
+What is CPU?,CPU is central processing unit of computer,CPU processes instructions,9
+What is CPU?,CPU is central processing unit of computer,CPU is monitor,1
+What is Compiler?,Compiler translates source code into machine code,Compiler converts code into machine language,9
+What is Compiler?,Compiler translates source code into machine code,Compiler is text editor,2
+What is Network?,Network is connection of multiple devices,Network links devices for communication,9
+What is Network?,Network is connection of multiple devices,Network is cable only,3
